@@ -13,7 +13,7 @@ This GitHub Action uploads files or zip archives to a Nextcloud server using Web
 | Name            | Description                         | Required | Default |
 | --------------- | ----------------------------------- | -------- | ------- |
 | `nextcloud_url` | The Nextcloud WebDAV URL.           | true     | -       |
-| `password` >    | Nextcloud password.                 | true     | -       |
+| `password`      | Nextcloud password.                 | true     | -       |
 | `base64`        | If true, inputs are Base64-encoded. | false    | `false` |
 
 ## Outputs
@@ -40,9 +40,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Upload to Nextcloud
-        uses: eskopp/nextcloud-uploader@v1
+        uses: eskopp/github-nextcloud-backup@main
         with:
           nextcloud-url: "aHR0cHM6Ly9leGFtcGxlLmNvbS9yZW1vdGUucGhwL2Rhdi9maWxlcy91c2Vy"
           password: "YmFzZTY0X3Bhc3N3b3Jk"
           base64: "true"
 ```
+## Example
+This image provides a visual representation of the Nextcloud Uploader Action in use. It demonstrates how files are uploaded to a Nextcloud server using the specified GitHub Action.
+
+![Nextcloud Uploader Action](image.png)
+

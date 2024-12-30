@@ -10,16 +10,16 @@ This GitHub Action uploads files or zip archives to a Nextcloud server using Web
 
 ## Inputs
 
-| Name              | Description                                       | Required | Default  |
-|-------------------|---------------------------------------------------|----------|----------|
-| `nextcloud_url`   | The Nextcloud WebDAV URL.                         | true     | -        |
-| `password` >       | Nextcloud password.                               | true     | -        |
-| `base64`          | If true, inputs are Base64-encoded.               | false    | `false`  |
+| Name            | Description                         | Required | Default |
+| --------------- | ----------------------------------- | -------- | ------- |
+| `nextcloud_url` | The Nextcloud WebDAV URL.           | true     | -       |
+| `password` >    | Nextcloud password.                 | true     | -       |
+| `base64`        | If true, inputs are Base64-encoded. | false    | `false` |
 
 ## Outputs
 
 | Name            | Description                  |
-|-----------------|------------------------------|
+| --------------- | ---------------------------- |
 | `upload-status` | Status of the upload process |
 
 ## Example Workflow
@@ -45,3 +45,4 @@ jobs:
           nextcloud-url: "aHR0cHM6Ly9leGFtcGxlLmNvbS9yZW1vdGUucGhwL2Rhdi9maWxlcy91c2Vy"
           password: "YmFzZTY0X3Bhc3N3b3Jk"
           base64: "true"
+```

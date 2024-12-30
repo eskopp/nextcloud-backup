@@ -19,7 +19,7 @@ outputs:
     description: "The name of the generated ZIP file (if any)."
 runs:
   using: "docker"
-  image: "Dockerfile" 
+  image: "Dockerfile"
 branding:
   color: "blue"
   icon: "cloud"

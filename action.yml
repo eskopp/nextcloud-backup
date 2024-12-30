@@ -1,0 +1,25 @@
+name: "Nextcloud Uploader"
+description: "Uploads files or zip archives to your Nextcloud server using WebDAV."
+inputs:
+  nextcloud_url:
+    description: "The Nextcloud WebDAV folder URL where the file will be uploaded."
+    required: true
+  username:
+    description: "The Nextcloud username."
+    required: true
+  password:
+    description: "The password for the Nextcloud user."
+    required: true
+  base64:
+    description: "If true, non-environment values are Base64-encoded and will be decoded before use."
+    required: false
+    default: "false"
+outputs:
+  zip-name:
+    description: "The name of the generated ZIP file (if any)."
+runs:
+  using: "docker"
+  image: "Dockerfile" 
+branding:
+  color: "blue"
+  icon: "cloud"
